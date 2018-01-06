@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "ADS-copy-bibtex",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://adsabs.harvard.edu/*"
+      ],
+      "js": ["jquery-3.2.1.min.js", "content.js"]
+    }
+  ]
+}
