@@ -21,7 +21,7 @@ if (bibCode) {
   var url = "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode="+bibCode+"&data_type=BIBTEX&db_key=AST&nocookieset=1"
   var textArea = document.createElement("textarea");
   textArea.setAttribute("id", "bibtex-result");
-  textArea.style.display = "none";
+  // textArea.style.display = "none";
 
   $.ajax({
     url: url,
@@ -30,6 +30,7 @@ if (bibCode) {
     success: function(data) {
       // Chop off first few lines of constant annoyance
       textArea.value = data.split("\n").slice(4).join("\n");
+      console.log(textArea.value);
       document.body.appendChild(textArea);
       // Add the button only after ajax query is done.
       $('body').prepend(createButton());
@@ -40,6 +41,7 @@ if (bibCode) {
   // otherwise it does not work.
   // c.f. https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
   function CopyToClipboard () {
+      console.log(textArea.value);
     textArea.select();
     try {
       var successful = document.execCommand('copy');
