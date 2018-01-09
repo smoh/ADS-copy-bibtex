@@ -1,4 +1,5 @@
 // content.js
+// TODO: keyboard trigger
 
 function createButton() {
     return $('<button/>', {
