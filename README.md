@@ -2,5 +2,9 @@
 
 A simple chrome browser extension to add a button to copy bibtex entry on ads abstract pages.
 
-currently not working if textarea display is none -- can't figure out why.
-c.f. https://github.com/zenorocha/clipboard.js
+To use,
+1. Clone repo
+2. Go to `chrome://extensions'
+3. Check 'Developer mode'
+4. Click 'Load unpacked extension' and choose cloned directory
+5. Check 'Enabled'
