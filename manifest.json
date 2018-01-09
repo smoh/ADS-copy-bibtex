@@ -7,7 +7,9 @@
       "matches": [
         "http://adsabs.harvard.edu/*"
       ],
-      "js": ["jquery-3.2.1.min.js", "content.js"]
+      "js": ["jquery-3.2.1.min.js",
+             "./node_modules/clipboard/dist/clipboard.js",
+             "content.js"]
     }
   ]
 }
