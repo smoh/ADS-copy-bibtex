@@ -2,10 +2,14 @@
 // TODO: keyboard trigger
 
 function createButton() {
-    return $('<button/>', {
+    var div = $('<div/>')
+        .css("display", "table-cell")
+        .css("float", "left")
+        .css("padding", "5px");
+    return div.append($('<button/>', {
         text: 'Copy BibTeX to clipboard',
         id: 'btn-bibtex-copy',
-    });
+    }));
 }
 
 function alertCopied() {
@@ -33,7 +37,7 @@ if (bibCode) {
     }
   });
 
-  $('body').prepend(createButton());
+  $('input[value=" Remove from private library "]').closest("div").after(createButton());
 
   var clipboard = new Clipboard('#btn-bibtex-copy', {
     text: function(trigger) {
